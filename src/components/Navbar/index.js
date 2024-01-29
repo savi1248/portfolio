@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled, { useTheme } from 'styled-components'
 import {Link as LinkR} from 'react-router-dom'
 import {DiCssdeck} from "react-icons/di"
@@ -147,52 +147,52 @@ import { Bio} from '../../data/constants';
 
 `
 
- const MobileMenuItems = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  list-style: none;
-  width: 100%;
-  height: 100%;
-`
+//  const MobileMenuItems = styled.ul`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 32px;
+//   list-style: none;
+//   width: 100%;
+//   height: 100%;
+// `
 
- const MobileMenuLink = styled(LinkR)`
-  color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  :hover {
-    color: ${({ theme }) => theme.primary};
-  }
+//  const MobileMenuLink = styled(LinkR)`
+//   color: ${({ theme }) => theme.text_primary};
+//   font-weight: 500;
+//   cursor: pointer;
+//   transition: all 0.2s ease-in-out;
+//   text-decoration: none;
+//   :hover {
+//     color: ${({ theme }) => theme.primary};
+//   }
 
-  &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.primary};
-  }
-`;
+//   &.active {
+//     border-bottom: 2px solid ${({ theme }) => theme.primary};
+//   }
+// `;
 
-const MobileMenuButton = styled.a`
-  border: 1.8px solid ${({ theme }) => theme.primary};
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  height: 70%;
-  border-radius: 20px;
-  color: ${({ theme }) => theme.primary};
-  cursor: pointer;
-  padding: 0 20px;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 16px;
-  transition: all 0.6s ease-in-out;
+// const MobileMenuButton = styled.a`
+//   border: 1.8px solid ${({ theme }) => theme.primary};
+//   justify-content: center;
+//   display: flex;
+//   align-items: center;
+//   height: 70%;
+//   border-radius: 20px;
+//   color: ${({ theme }) => theme.primary};
+//   cursor: pointer;
+//   padding: 0 20px;
+//   font-weight: 500;
+//   text-decoration: none;
+//   font-size: 16px;
+//   transition: all 0.6s ease-in-out;
 
-  :hover {
-    background: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.white};
-  }
-`;
+//   :hover {
+//     background: ${({ theme }) => theme.primary};
+//     color: ${({ theme }) => theme.white};
+//   }
+// `;
 
  const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
@@ -209,17 +209,17 @@ const MobileMenuButton = styled.a`
   }
 `;
 
- const MobileNavLogo = styled(LinkR)`
-  width: 80%;
-  padding: 0 6px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  text-decoration: none;
-  @media (max-width: 640px) {
-    padding: 0 0px;
-  }
-`;
+//  const MobileNavLogo = styled(LinkR)`
+//   width: 80%;
+//   padding: 0 6px;
+//   display: flex;
+//   justify-content: start;
+//   align-items: center;
+//   text-decoration: none;
+//   @media (max-width: 640px) {
+//     padding: 0 0px;
+//   }
+// `;
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme()
@@ -227,7 +227,8 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo to='/'>
-          <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
+          <a style="display: flex; alignItems: center; color: white;
+           marginBottom: 20; cursor: pointer">
             <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
           </a>
         </NavLogo>

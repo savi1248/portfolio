@@ -84,12 +84,12 @@ const Divider = Styled.div`
     width: 1.5px;
     background: ${({ theme }) => theme.primary};
     `;
-    const ButtonGroup = Styled.div`
-    display: flex;
-    justify-content: flex-end;
-    margin: 12px 0px;
-    gap: 12px;
-`;
+//     const ButtonGroup = Styled.div`
+//     display: flex;
+//     justify-content: flex-end;
+//     margin: 12px 0px;
+//     gap: 12px;
+// `;
 
 
 const Projects = ({openModal,setOpenModal}) => {
